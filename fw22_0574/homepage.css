@@ -183,6 +183,7 @@ p{
 }
 .channel-down ul li:hover{
     background-color: rgb(244, 244, 244);
+    cursor: pointer;
 }
 .nav-bar .login-btn{
     position: relative;
@@ -476,7 +477,7 @@ p{
 }
 
 .cont-11{
-    margin: 20vh auto;
+    margin: 20vh auto 10vh;
     height: 60vh;
     width: 85%;
     display: flex;
@@ -495,7 +496,7 @@ p{
     left: 2px;
     font-size: 15px;
 }
-.cont-11 img{
+.cont-11 .img{
     width: 40%;
     height: 100%;
 }
@@ -504,7 +505,7 @@ p{
 }
 .cont-12{
     width: 30%;
-    height: 10vh;
+    height: 5vh;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -515,24 +516,56 @@ p{
 h5{
     text-align: center;
     font-size: 16px;
+    margin-bottom: 5vh;
 }
-.cont-12 div{
+/* .cont-12 div{
     border: 1px solid black;
+} */
+.cont-12 div:nth-child(1) img{
+    width: 65%;
 }
-.cont-12 div:nth-child(1){
-    background-image: url("img-8.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.cont-12 div:nth-child(2) img{
+   width: 90%;
 }
-.cont-12 div:nth-child(1){
-    background-image: url("img-9.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.cont-12 div:nth-child(3) img{
+    width: 90%;
 }
-.cont-12 div:nth-child(3){
-    background-image: url("img-10");
-    background-position: center;
-    background-repeat: no-repeat;
+
+.cont-13{
+    margin-top: 10vh;
+    width: 100%;
+    height: 60vh;
+    background-color: rgb(5, 80, 232);
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-content: center;
+}
+
+.cont-13 h1{
+    text-align: center;
+    color: white;
+}
+
+.cont-13 .btn-3{
+    position: relative;
+    left: 39vw;
+    top: 5vh;
+    height: 10vh;
+    width: 13vw;
+    border: none;
+    background-color: rgb(233, 114, 132);
+    color: white;
+    font-size: 19px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: rgb(35 31 32 / 20%) 0px 18px 30px;
+}
+
+.cont-13 .btn-3:hover{
+    background-color: rgb(229, 87, 108);
+}
+
+.cont-14{
+    margin-top: 20vh;
 }
