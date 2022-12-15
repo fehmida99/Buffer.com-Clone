@@ -8,9 +8,10 @@
     <title>Plans Page</title>
 </head>
 <link rel="stylesheet" href="servicepage.css">
-
+<link rel="stylesheet" href="navbar.css">
 <body>
-    <button id="open">Start Subscription</button>
+
+<button id="open">Start Subscription</button>
 
     <div id="modal_container" class="modal_container">
 
@@ -30,6 +31,7 @@
                   <label for="year">Yearly</label>
                   <label id="saving" for="saving">Savings $24/year </label>
             </div>
+            
             <div id="third">
                 <span id="closed">X</span>
                 <h1 id="sum">Summary</h1>
@@ -38,12 +40,6 @@
            
         </div>
        
-
-
-
-
-
-
 
 
         <div id="service-cont">
@@ -59,21 +55,22 @@
         <span>Currently Paying: $0/mo</span>
     </div>
     <div>
-        <span>Channels   </span>
+        <span>Channels  </span>
        <img id="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuPxkCqftnMu0Q8KejyBRbm-6oG3d4g7JWA4eyVE1ZZPIakMgO_ayLTNqIIA2cjVRu1C4&usqp=CAU" alt="socialmedia.png">
        
        <button id="sub"><span id="subout">-</span></button>
        <button id="count"><input id="val" type="num" value="1"></button>
        <button id="add">+</button><br>
        <p>Your updated plan:</p>
-       <p>plan</p>
-       <span>1 channels</span> <span>Unlimited Users</span>
+       <p id="plan">plan</p>
+       <span id="channels"><span>1</span> channels</span> <span>Unlimited Users</span>
        <hr>
 <span>Total due today:</span><br>
-<span>$20</span><br>
+<span>$ <span id="total">0</span></span><br>
 <hr>
-<span> $20 will be billed every year until canceled.</span>
-    </div><button>Go to Payment</button>
+<span> $<span id="total2">0</span> will be billed every month until canceled.</span>
+    </div>
+    <button id="payment">Go to Payment</button>
             </div>
             
 
@@ -81,7 +78,6 @@
         
        
     </div>
-
 
 
 
