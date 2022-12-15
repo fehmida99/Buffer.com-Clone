@@ -7,6 +7,9 @@
 body{
     font-family: 'Montserrat', sans-serif;
 }
+p{
+    font-size: 18px;
+}
 .nav-bar{
     margin-top: 2vh;
     height: 10vh;
@@ -20,6 +23,7 @@ body{
     height: 16vh;
     position: relative;
     left: 11vw;
+    cursor: pointer;
 }
 
 .nav-bar ul{
@@ -225,7 +229,7 @@ body{
 .btn-1:hover{
     background-color: rgb(14, 75, 190);
 }
-.cont-1 .btn .btn-2{
+.btn-2{
     height: 7vh;
     width: 11vw;
     border: 1px solid #3832ff;
@@ -238,7 +242,7 @@ body{
     top: 3vh;
     right: 4vw;
 }
-.cont-1 .btn .btn-2:hover{
+.btn-2:hover{
     background-color: rgb(230, 230, 246);
 }
 
@@ -434,4 +438,66 @@ body{
 }
 .cont-8 p{
     text-align: center;
+}
+
+.cont-11{
+    margin: 20vh auto;
+    height: 60vh;
+    width: 85%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cont-11 .details-3 h1{
+    margin-bottom: 5vh;
+}
+.cont-11 .details-3 p{
+    padding-bottom: 2vh;
+    font-size: 17px;
+}
+.details-3 button{
+    position: relative;
+    left: 2px;
+    font-size: 15px;
+}
+.cont-11 img{
+    width: 40%;
+    height: 100%;
+}
+.img img{
+    width: 100%;
+}
+.cont-12{
+    width: 30%;
+    height: 10vh;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    gap: 15px;
+}
+
+h5{
+    text-align: center;
+    font-size: 16px;
+}
+.cont-12 div{
+    border: 1px solid black;
+}
+.cont-12 div:nth-child(1){
+    background-image: url("img-8.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.cont-12 div:nth-child(1){
+    background-image: url("img-9.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.cont-12 div:nth-child(3){
+    background-image: url("img-10");
+    background-position: center;
+    background-repeat: no-repeat;
 }
