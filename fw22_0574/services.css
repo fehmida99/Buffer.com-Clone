@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 /* rgb(44, 75, 255) */
-*{
+/* *{
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
     line-height: 35px;
     font-family: 'Poppins', sans-serif;
-}
+} */
 
 /* body {
    
@@ -17,7 +17,7 @@
     justify-content: center;
     min-height: 100vh;
     margin: 0;
-} */ */
+} */ 
 
 #title {
     font-size: 30px;
