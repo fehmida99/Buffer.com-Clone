@@ -460,7 +460,7 @@ p{
     left: 2px;
     font-size: 15px;
 }
-.cont-11 img{
+.cont-11 .img{
     width: 40%;
     height: 100%;
 }
@@ -469,7 +469,7 @@ p{
 }
 .cont-12{
     width: 30%;
-    height: 10vh;
+    height: 5vh;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -480,24 +480,17 @@ p{
 h5{
     text-align: center;
     font-size: 16px;
+    margin-bottom: 5vh;
 }
-.cont-12 div{
+/* .cont-12 div{
     border: 1px solid black;
+} */
+.cont-12 div:nth-child(1) img{
+    width: 65%;
 }
-.cont-12 div:nth-child(1){
-    background-image: url("img-8.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.cont-12 div:nth-child(2) img{
+   width: 90%;
 }
-.cont-12 div:nth-child(1){
-    background-image: url("img-9.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.cont-12 div:nth-child(3){
-    background-image: url("img-10");
-    background-position: center;
-    background-repeat: no-repeat;
+.cont-12 div:nth-child(3) img{
+    width: 90%;
 }
