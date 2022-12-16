@@ -28,7 +28,7 @@ top: 0px;
 *{
     margin: 0;
     padding: 0;
-    line-height: 35px;
+    /* line-height: 35px; */
 }
 .drop-down>p,h4{
     
@@ -213,10 +213,10 @@ p{
 }
 
 .cont-1{
-    margin: 8vh auto 0px;
+    margin: 18vh auto 0px;
     display: flex;
     justify-content: space-evenly;
-    height: 80vh;
+    height: 73vh;
     width: 85%;
 }
 .close-button{
@@ -509,7 +509,7 @@ p{
     text-align: center;
 }
 .swiper{
-    height: 70vh;
+    height: 75vh;
     width: 90%;
     display: flex;
     align-items: center;
@@ -520,7 +520,7 @@ p{
 }
 
 .cont-9{
-    height: 70vh;
+    height: 75vh;
     width: 90%;
     display: flex;
     align-items: center;

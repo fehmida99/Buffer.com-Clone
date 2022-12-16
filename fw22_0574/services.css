@@ -159,20 +159,14 @@ font-size: 35px;
 }
 
 #open {
-    background: rgb(3, 52, 247);
-    width: 8%;
-    margin-left: 200px;
-    position: absolute;
-    top: 30px;
-    height: 50px;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 5px;
-    padding-bottom: 10px;
-    font-size: 15px;
+    height: 7vh;
+    width: 11vw;
     border: none;
-    border-radius: 10px;
-    line-height: 20px;
+    background-color: #3832ff;
+    color: white;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
 
 } 
 #open:hover {

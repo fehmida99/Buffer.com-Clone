@@ -74,8 +74,9 @@
                 <li><a href="#">Blog</a></li>
             </ul>
             <div class="login-btn">
-                <a href="#">Log in</a>
-                <button>Get started now</button>
+                <button id="open">Start Subscription</button>
+                <a href="/register.html">Log in</a>
+                <button class="get-started">Get started now</button>
             </div>
         </div>
     </nav>
@@ -428,4 +429,25 @@
     </footer>
 </body>
 </html>
+
 <script src="homepage.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="services.js"></script>
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    slidesPerGroup: 3,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
