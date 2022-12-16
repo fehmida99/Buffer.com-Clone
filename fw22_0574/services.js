@@ -7,33 +7,45 @@ let open = document.querySelector("#open")
 closed.addEventListener("click", () => {
 
     model.classList.remove("show")
-
+    document.querySelector(".cont-1").innerHTML=` <div class="grow">
+    <div class="content">
+        <h1>Grow your audience on social and beyond</h1>
+    <p>Buffer helps you build an audience organically. We’re a</p>
+    <p>values-driven company that provides affordable,intuitive,</p>
+    <p>intuitive, marketing tools for ambitious people and teams.</p>
+    </div>
+    <div class="btn">
+        <button class="btn-1">Get started now</button>
+        <button class="btn-2"><i class="fa-regular fa-circle-play"></i> Watch vedio</button>
+    </div>
+</div>
+<img id ="img1" src="img-1.webp" alt="">`
 })
 
 
 open.addEventListener("click", () => {
 
     model.classList.add("show")
-
-
-
-})
-
-
-// When the user clicks anywhere outside of the modal, close it
-document.body.addEventListener("click", (event) => {
     
-    if (event.target == document.body) {
-        model.classList.remove("show")
-    }
+document.querySelector(".cont-1").innerHTML=""
+
+
+
 })
+
+
+
+
+
+
+
 // my mini database
 
 let montharr = [
     {
         title: "Free",
         id: "f",
-        price: "$0",
+        price: "0",
         desc: "Simplify the noise and test out social media management tools.",
         month: "Per channel per month",
         year: "chargedyear",
@@ -43,7 +55,7 @@ let montharr = [
     {
         title: "Essentials",
         id: "s",
-        price: "$6",
+        price: 6,
         desc: "Get the most out of your creative with publishing, analytics & engagement tools.",
         month: "Per channel per month",
         year: "chargedyear",
@@ -55,7 +67,7 @@ let montharr = [
     {
         title: "Essentials + Team Pack",
         id: "t",
-        price: "$12",
+        price: 12,
         desc: "Collaborate with your team in one place & save time reporting.",
         month: "Per channel per month",
         year: "chargedyear",
@@ -69,7 +81,7 @@ let yeararr = [
     {
         id: "f",
         title: "Free",
-        price: "$0",
+        price: 0,
         desc: "Simplify the noise and test out social media management tools.",
         month: "Per channel per month",
         year: "chargedyear",
@@ -79,7 +91,7 @@ let yeararr = [
     {
         id: "s",
         title: "Essentials",
-        price: "$5",
+        price: 5,
         desc: "Get the most out of your creative with publishing, analytics & engagement tools.",
         month: "Per channel per month",
         year: "chargedyear",
@@ -91,7 +103,7 @@ let yeararr = [
     {
         id: "t",
         title: "Essentials + Team Pack",
-        price: "$10",
+        price: 10,
         desc: "Collaborate with your team in one place & save time reporting.",
         month: "Per channel per month",
         year: "chargedyear",
@@ -103,6 +115,56 @@ let yeararr = [
 
 
 ]
+
+
+
+
+// When the user clicks anywhere outside of the modal, close it
+document.body.addEventListener("click", (event) => {
+    // console.log(event.path[1].id)
+    localStorage.setItem("id",event.path[1].id)
+    let value= localStorage.getItem("id")
+    calculation(value)
+    if (event.target == document.body) {
+        model.classList.remove("show")
+    }
+})
+
+// Calculations of services
+let price =null
+function calculation (value){
+
+    console.log(value)
+let cost = montharr.filter((item)=>{
+
+    if(item.id==value){
+        return item.price
+        
+    }
+
+
+})
+
+ price =cost[0].price
+ 
+ console.log(price)
+localStorage.setItem("price",price)
+
+ document.querySelector("#total").innerText=localStorage.getItem("price")
+ document.querySelector("#total2").innerText=localStorage.getItem("price")
+
+let title = cost[0].title
+document.querySelector("#plan").innerText=title
+
+}
+
+
+
+
+
+
+
+
 
 
 // check the checkbox
@@ -125,7 +187,11 @@ checkbox.addEventListener( "change", () => {
 createdivs(montharr)
 
 
+//logo
 
+document.querySelector("#logo").addEventListener("click",()=>{
+    window.location.href="index.html"
+})
 
 
 // div creater
@@ -136,13 +202,14 @@ function createdivs(montharr) {
     for (i = 0; i < montharr.length; i++) {
         let div = document.createElement("div")
         let title = document.createElement("h3")
+        title.setAttribute("class","title")
         let id = montharr[i].id
-        div.setAttribute("id", id)
+         div.setAttribute("id", id)
         title.innerText = montharr[i].title
         let desc = document.createElement("p")
         desc.innerText = montharr[i].desc
         let price = document.createElement("h2")
-        price.innerText = montharr[i].price
+        price.innerText ="$" + montharr[i].price
         let monthline = document.createElement("p")
         monthline.innerText = montharr[i].month
 
@@ -150,7 +217,7 @@ function createdivs(montharr) {
         feature.innerText = "Features"
         let hr = document.createElement("hr")
         hr.setAttribute("class", "hr")
-        div.append(title, desc, price, monthline,hr, feature)
+        div.append(title, desc, price, monthline,hr,feature)
         for (k = 0; k < montharr[i].features.length; k++) {
             let f = document.createElement("p")
             f.innerText = "✔️  " + montharr[i].features[k]
@@ -174,36 +241,94 @@ function createdivs(montharr) {
 // service count
 
 let count=document.querySelector("#val").value
-let c=0+Number(count)
+let c=Number(count)
 let add=document.querySelector("#add")
 add.addEventListener("click",()=>{
     // 
 //     let newcount=+count
-    if(c>=0){
+    
         c++
+       
   document.querySelector("#val").value=c
   sessionStorage.setItem("count",c)
+  document.querySelector("#channels").innerText=c +" channels"
+  calc()
 
-    }
+
+
+    
 
   
 })
 
 let sub = document.querySelector("#sub")
-let c2=sessionStorage.getItem("count")
-  c2=+c2
-  
+
+
 sub.addEventListener("click",()=>{
-  
+   
+
+   
+    let c2=sessionStorage.getItem("count")
+    c2=Number(c2)
+    if(c<=1){
+        document.querySelector("#val").value=1
+        calc()
+         return
+    }
+    
     if(c2>=2){
-        c2--
-        
-        document.querySelector("#val").value=c2
+        c--
+       
+        document.querySelector("#val").value=c
+        document.querySelector("#channels").innerText=c +" Channels"
+        calc()
+        sessionStorage.setItem("count",c)
     }else{
         document.querySelector("#val").value=1
     }
-    console.log(c2)
+    console.log(c)
 })
+
+
+
+
+
+function calc(){
+let val = document.querySelector("#total").innerText
+ let cost_per_service =Number(val)
+ localStorage.setItem("cost",val)
+let count = sessionStorage.getItem("count")
+count = Number(count)
+let cost =localStorage.getItem("cost")
+cost= Number (cost)
+
+let total =cost_per_service*count
+total=total-cost
+
+document.querySelector("#total").innerText=""
+document.querySelector("#total").innerText=total
+document.querySelector("#total2").innerText=""
+document.querySelector("#total2").innerText=total
+}
+// document.querySelector("#total").innerText=val
+// let val= localStorage.getItem("total")
+// val = Number(val)*c
+
+// let val= localStorage.getItem("total")
+// val = Number(val)*c
+// document.querySelector("#total").innerText=val
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -249,3 +374,13 @@ sub.addEventListener("click",()=>{
 
 // }
 
+
+let btn= document.getElementById("payment")
+
+
+btn.addEventListener("click",()=>{
+
+
+    console.log("ok")
+
+})
