@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media Flow</title>
 
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Flow</title>
 
-     <!-- <--- publishing part --->
-     <div class="left">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-       
+<body>
+
+  <!-- <--- publishing part --->
+  <div class="left">
+
 
         
         <h3>Content</h3>
@@ -30,7 +31,11 @@
        </div>
 
 
-    <!-- <--- calaendar part  --->
+
+
+
+   
+
 
     <div id="container">
         <div id="flex">
@@ -50,45 +55,65 @@
                 </div>
         </div>
       
-    
-
-      <div id="weekdays">
-        <div>Sunday</div>
-        <div>Monday</div>
-        <div>Tuesday</div>
-        <div>Wednesday</div>
-        <div>Thursday</div>
-        <div>Friday</div>
-        <div>Saturday</div>
-      </div>
+  
+     
+  </div>
 
 
-   
+  
 
-      <div id="calendar"></div>
-    </div>
 
-    <div id="newEventModal">
-      <h2>New Post</h2>
 
       <input id="eventTitleInput" placeholder="What would you like to share?" />
       <input id="eventTitleInput" placeholder="Post Title" />
 
-      <button id="saveButton">Save</button>
-      <button id="cancelButton">Cancel</button>
+
+    <div id="weekdays">
+      <div>Sunday</div>
+      <div>Monday</div>
+      <div>Tuesday</div>
+      <div>Wednesday</div>
+      <div>Thursday</div>
+      <div>Friday</div>
+      <div>Saturday</div>
     </div>
 
+ 
     <div id="deleteEventModal">
       <h2>Discard Changes?</h2>
 
-      <p id="eventText"></p>
+
+
 
       <button id="deleteButton">Discard Changes</button>
       <button id="closeButton">Close</button>
     </div>
 
-    <div id="modalBackDrop"></div>
 
-    <script src="./script.js"></script>
-  </body>
+    <div id="calendar"></div>
+  </div>
+
+  <div id="newEventModal">
+    <h2>New Post</h2>
+
+    <input id="eventTitleInput" placeholder="Post Title" />
+
+    <button id="saveButton">Save</button>
+    <button id="cancelButton">Cancel</button>
+  </div>
+
+  <div id="deleteEventModal">
+    <h2>Post</h2>
+
+    <p id="eventText"></p>
+
+    <button id="deleteButton">Delete</button>
+    <button id="closeButton">Close</button>
+  </div>
+
+  <div id="modalBackDrop"></div>
+
+  <script src="./script.js"></script>
+</body>
+
 </html>
