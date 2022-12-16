@@ -32,10 +32,10 @@ top: 0px;
     padding: 0;
     /* line-height: 35px; */
 }
-.drop-down>p,h4{
+/* .drop-down>p,h4{
     
 line-height: 20px;
-}
+} */
 .drop-down>h4{
     font-size: 15px;
 }
