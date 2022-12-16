@@ -24,7 +24,9 @@ top: 0px;
     margin-top: 50px;
 }
 
-
+.cont-1>img{
+    margin-top: 50px
+}
 *{
     margin: 0;
     padding: 0;
