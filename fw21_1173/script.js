@@ -132,3 +132,16 @@ function initButtons() {
 
 initButtons();
 load();
+
+
+
+
+
+// *********************
+let button = document.querySelector("#batn")
+button.addEventListener("click",()=> {
+  alert(" SELECT THE DATE TO CREATE NEW POST ")
+})
+
+
+

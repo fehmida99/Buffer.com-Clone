@@ -14,13 +14,17 @@
 
        
 
-
+        
         <h3>Content</h3>
+        <i class="fa-regular fa-calendar"></i>
         <h3 id="box" >Calendar</h3>
         <h3>Compaigns</h3>
-        <h3>______________________</h3>
+        <!-- <h3>______________________</h3> -->
+        <hr>
         <h3>Queues</h3>
-        <button id="btn">Add Channels</button>
+
+        <button id="btn"> <a style="text-decoration: none;" href="channel.html"  >Add Channels</a></button>
+      
     
        
        </div>
@@ -42,7 +46,7 @@
                     <button class="post">All Posts</button>
                     <button class="post">All Channels</button>
                   
-                  <button class="post">Create Post</button>
+                  <button id="batn" class="post">Create Post</button>
                 </div>
         </div>
       
@@ -67,6 +71,7 @@
     <div id="newEventModal">
       <h2>New Post</h2>
 
+      <input id="eventTitleInput" placeholder="What would you like to share?" />
       <input id="eventTitleInput" placeholder="Post Title" />
 
       <button id="saveButton">Save</button>
@@ -74,11 +79,11 @@
     </div>
 
     <div id="deleteEventModal">
-      <h2>Post</h2>
+      <h2>Discard Changes?</h2>
 
       <p id="eventText"></p>
 
-      <button id="deleteButton">Delete</button>
+      <button id="deleteButton">Discard Changes</button>
       <button id="closeButton">Close</button>
     </div>
 
