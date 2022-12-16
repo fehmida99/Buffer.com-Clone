@@ -95,7 +95,7 @@ color: black;
   #weekdays {
     width: 100%;
     display: flex;
-    color: #247BA0;
+    color: rgb(2, 78, 78);
     font-weight: bold;
   }
   #weekdays div {
@@ -124,11 +124,11 @@ color: black;
     justify-content: space-between;
   }
   .day:hover {
-    background-color: #abb5d8;
+    background-color: rgb(156, 238, 211);
   }
   
   .day + #currentDay {
-    background-color:#e8f4fa;
+    background-color:#b8d7e6;
   }
   .event {
     font-size: 10px;
@@ -171,10 +171,10 @@ color: black;
     border: 2px solid red;
   }
   #cancelButton, #deleteButton {
-    background-color: #d36c6c;
+    background-color: #da0000;
   }
   #saveButton, #closeButton {
-    background-color: #92a1d1;
+    background-color: rgb(12, 10, 130);
   }
   #eventText {
     font-size: 14px;
