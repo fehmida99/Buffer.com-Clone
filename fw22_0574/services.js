@@ -20,6 +20,13 @@ closed.addEventListener("click", () => {
     </div>
 </div>
 <img id ="img1" src="img-1.webp" alt="">`
+
+document.querySelector(".cont-2").innerHTML=`
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>`
 })
 
 
@@ -28,6 +35,7 @@ open.addEventListener("click", () => {
     model.classList.add("show")
 
     document.querySelector(".cont-1").innerHTML = ""
+    document.querySelector(".cont-2").innerHTML = ""
 
 
 
@@ -197,6 +205,10 @@ function targetarr(arr){
    })
 
    console.log(filterdata)
+//    let id = filterdata[0].id
+//    let style=document.querySelector(`${id}`)
+//    style.style.border= "5px solid blue"
+
    document.querySelector("#plan").innerText=filterdata[0].title
    let cost = filterdata[0].price
  sessionStorage.setItem("P",cost)
@@ -206,7 +218,7 @@ function targetarr(arr){
 
 
 
-
+targetarr(montharr)
 
 
 
