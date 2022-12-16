@@ -117,6 +117,8 @@ font-size: 35px;
     width: 50px;
     font-size: 20px;
     border: 1px solid rgb(44, 75, 255);
+    cursor: pointer;
+
 }
 
 #sub {
@@ -124,6 +126,7 @@ font-size: 35px;
     width: 50px;
     font-size: 20px;
     border: 1px solid rgb(44, 75, 255);
+    cursor: pointer;
 }
 
 #count>input {
@@ -155,7 +158,7 @@ font-size: 35px;
     width: 100%;
     top: 0;
    
-    width: 30%;
+    width: 31.5%;
 }
 
 #open {
@@ -187,8 +190,8 @@ font-size: 35px;
 #closed {
 
     display: inline-block;
-    margin-left: 98%;
-    width: 20px;
+    margin-left: 95%;
+   
     padding: 5px;
     margin-top: 0px;
 
@@ -197,7 +200,8 @@ font-size: 35px;
 }
 
 #closed:hover {
-    background-color: rgb(255, 0, 0);
+    color: red;
+    cursor: pointer;
 
 }
 

@@ -97,5 +97,5 @@ function divcreater(){
 //logo
 
 document.querySelector("#logo").addEventListener("click",()=>{
-    window.location.href="index.html"
+    window.location.replace("index.html")
 })

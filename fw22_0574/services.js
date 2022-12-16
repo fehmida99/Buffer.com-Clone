@@ -7,7 +7,7 @@ let open = document.querySelector("#open")
 closed.addEventListener("click", () => {
 
     model.classList.remove("show")
-    document.querySelector(".cont-1").innerHTML=` <div class="grow">
+    document.querySelector(".cont-1").innerHTML = ` <div class="grow">
     <div class="content">
         <h1>Grow your audience on social and beyond</h1>
     <p>Buffer helps you build an audience organically. We’re a</p>
@@ -26,8 +26,8 @@ closed.addEventListener("click", () => {
 open.addEventListener("click", () => {
 
     model.classList.add("show")
-    
-document.querySelector(".cont-1").innerHTML=""
+
+    document.querySelector(".cont-1").innerHTML = ""
 
 
 
@@ -45,7 +45,7 @@ let montharr = [
     {
         title: "Free",
         id: "f",
-        price: "0",
+        price: 0,
         desc: "Simplify the noise and test out social media management tools.",
         month: "Per channel per month",
         year: "chargedyear",
@@ -119,42 +119,126 @@ let yeararr = [
 
 
 
-// When the user clicks anywhere outside of the modal, close it
-document.body.addEventListener("click", (event) => {
-    // console.log(event.path[1].id)
-    localStorage.setItem("id",event.path[1].id)
-    let value= localStorage.getItem("id")
-    calculation(value)
-    if (event.target == document.body) {
-        model.classList.remove("show")
-    }
+
+
+
+document.querySelector("#logo").addEventListener("click", () => {
+    window.location.replace("index.html")
 })
+// service count
+
+let count = document.querySelector("#val").value
+let c = Number(count)
+let add = document.querySelector("#add")
+add.addEventListener("click", () => {
+    console.log("ok")
+    //     let newcount=+count
+
+    c++
+
+    document.querySelector("#val").value = c
+    sessionStorage.setItem("count", c)
+    document.querySelector("#channels").innerText = c + " channels"
+    //   calc()
+
+    calculation()
+
+
+
+
+})
+
+
+
+let sub = document.querySelector("#sub")
+
+
+sub.addEventListener("click", () => {
+
+
+
+    let c2 = sessionStorage.getItem("count")
+    c2 = Number(c2)
+    if (c <= 1) {
+        document.querySelector("#val").value = 1
+        // calc()
+        return
+    }
+
+    if (c2 >= 2) {
+        c--
+
+        document.querySelector("#val").value = c
+        document.querySelector("#channels").innerText = c + " Channels"
+        // calc()
+        sessionStorage.setItem("count", c)
+    } else {
+        document.querySelector("#val").value = 1
+    }
+    console.log(c)
+    calculation()
+})
+
+
+
+// target the elements
+
+
+
+function targetarr(arr){
+    document.querySelector(".first").addEventListener("click",(event)=>{
+
+        let value= event.path[1].id
+      
+  let filterdata= arr.filter((item)=>{
+    if(value==item.id){
+        return item
+    }
+   })
+
+   console.log(filterdata)
+   document.querySelector("#plan").innerText=filterdata[0].title
+   let cost = filterdata[0].price
+ sessionStorage.setItem("P",cost)
+      })
+      
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Calculations of services
-let price =null
-function calculation (value){
 
-    console.log(value)
-let cost = montharr.filter((item)=>{
-
-    if(item.id==value){
-        return item.price
-        
+function calculation() {
+    let count = sessionStorage.getItem("count")
+    count=Number(count)
+    if(count){
+     count = sessionStorage.getItem("count")
+     count=Number(count)
+    }else{
+     count=1
     }
+       let cost =sessionStorage.getItem("P")
+       cost = Number(cost)
+
+    let cost2= cost*count
+       console.log(cost,count,cost2)
+       
+       document.querySelector("#total").innerText=cost2
+       document.querySelector("#total2").innerText=cost2
+       
 
 
-})
-
- price =cost[0].price
- 
- console.log(price)
-localStorage.setItem("price",price)
-
- document.querySelector("#total").innerText=localStorage.getItem("price")
- document.querySelector("#total2").innerText=localStorage.getItem("price")
-
-let title = cost[0].title
-document.querySelector("#plan").innerText=title
 
 }
 
@@ -171,15 +255,21 @@ document.querySelector("#plan").innerText=title
 
 let checkbox = document.getElementById("checkbox")
 
-checkbox.addEventListener( "change", () => {
-    if ( checkbox.checked ) {
+checkbox.addEventListener("change", () => {
+    if (checkbox.checked) {
         createdivs(yeararr)
-        document.querySelector("#saving").innerText="Savings $24/year"
-    } else{
+        document.querySelector("#saving").innerText = "Savings $24/year"
+        targetarr(yeararr)
+        createdivs(yeararr)
+    } else {
+       
+        document.querySelector("#saving").innerText = "Save $24/year"
+        targetarr(montharr)
         createdivs(montharr)
-        document.querySelector("#saving").innerText="Save $24/year"
+       
     }
 })
+
 
 
 
@@ -187,37 +277,38 @@ checkbox.addEventListener( "change", () => {
 createdivs(montharr)
 
 
-//logo
-
-document.querySelector("#logo").addEventListener("click",()=>{
-    window.location.href="index.html"
-})
 
 
 // div creater
 function createdivs(montharr) {
-   
-    document.querySelector(".first").innerHTML=""
+
+    document.querySelector(".first").innerHTML = ""
 
     for (i = 0; i < montharr.length; i++) {
         let div = document.createElement("div")
         let title = document.createElement("h3")
-        title.setAttribute("class","title")
+        title.setAttribute("class", "title")
         let id = montharr[i].id
-         div.setAttribute("id", id)
+        div.setAttribute("id", id)
         title.innerText = montharr[i].title
+
         let desc = document.createElement("p")
         desc.innerText = montharr[i].desc
         let price = document.createElement("h2")
-        price.innerText ="$" + montharr[i].price
+        price.innerText = "$" + montharr[i].price
+
         let monthline = document.createElement("p")
         monthline.innerText = montharr[i].month
-
+        if (montharr[2].price == 10) {
+            let py = document.createElement("p")
+            py.innerText = "Charged Yearly"
+            div.append(py)
+        }
         let feature = document.createElement("h3")
         feature.innerText = "Features"
         let hr = document.createElement("hr")
         hr.setAttribute("class", "hr")
-        div.append(title, desc, price, monthline,hr,feature)
+        div.append(title, desc, price, monthline, hr, feature)
         for (k = 0; k < montharr[i].features.length; k++) {
             let f = document.createElement("p")
             f.innerText = "✔️  " + montharr[i].features[k]
@@ -237,148 +328,10 @@ function createdivs(montharr) {
 
 
 
-
-// service count
-
-let count=document.querySelector("#val").value
-let c=Number(count)
-let add=document.querySelector("#add")
-add.addEventListener("click",()=>{
-    // 
-//     let newcount=+count
-    
-        c++
-       
-  document.querySelector("#val").value=c
-  sessionStorage.setItem("count",c)
-  document.querySelector("#channels").innerText=c +" channels"
-  calc()
+let btn = document.getElementById("payment")
 
 
-
-    
-
-  
-})
-
-let sub = document.querySelector("#sub")
-
-
-sub.addEventListener("click",()=>{
-   
-
-   
-    let c2=sessionStorage.getItem("count")
-    c2=Number(c2)
-    if(c<=1){
-        document.querySelector("#val").value=1
-        calc()
-         return
-    }
-    
-    if(c2>=2){
-        c--
-       
-        document.querySelector("#val").value=c
-        document.querySelector("#channels").innerText=c +" Channels"
-        calc()
-        sessionStorage.setItem("count",c)
-    }else{
-        document.querySelector("#val").value=1
-    }
-    console.log(c)
-})
-
-
-
-
-
-function calc(){
-let val = document.querySelector("#total").innerText
- let cost_per_service =Number(val)
- localStorage.setItem("cost",val)
-let count = sessionStorage.getItem("count")
-count = Number(count)
-let cost =localStorage.getItem("cost")
-cost= Number (cost)
-
-let total =cost_per_service*count
-total=total-cost
-
-document.querySelector("#total").innerText=""
-document.querySelector("#total").innerText=total
-document.querySelector("#total2").innerText=""
-document.querySelector("#total2").innerText=total
-}
-// document.querySelector("#total").innerText=val
-// let val= localStorage.getItem("total")
-// val = Number(val)*c
-
-// let val= localStorage.getItem("total")
-// val = Number(val)*c
-// document.querySelector("#total").innerText=val
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let select2 = document.querySelectorAll(".modal_container>div>div>div")
-// let val=localStorage.setItem("value","f")
-// for (let i = 0; i < select2.length; i++) {
-//      select2[i].addEventListener("click", (event) => {
-//         let value=localStorage.getItem("value")
-//        if (event.path[1].id){
-// console.log(select2[i])
-//        }
-//         if (select2[i].id == "f") {
-       
-           
-//                 let f = document.getElementById(`${select2[i].id}`)
-//                 if(value=="f"){
-//                     f.
-//                 }
-//             localStorage.setItem("value",select2[i].id)
-//              f.classList.add("selection")
-//         }
-//         if (select2[i].id == "s") {
-//             let s = document.getElementById(`${select2[i].id }`)
-//             s.classList.add("selection")
-//             localStorage.setItem("value",select2[i].id)
-//             }
-               
- 
-        
-//          if(select2[i].id == "t") {
-          
-//               let t = document.getElementById(`${select2[i].id}`)
-//                 t.classList.add("selection")
-//                 localStorage.setItem("value",select2[i].id)
-
-          
-//          }  
-            
-           
-        
-//      })
-
-// }
-
-
-let btn= document.getElementById("payment")
-
-
-btn.addEventListener("click",()=>{
+btn.addEventListener("click", () => {
 
 
     console.log("ok")
