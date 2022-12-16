@@ -302,6 +302,7 @@ p{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    opacity: 0.3;
 }
 
 .cont-2 div:nth-child(2){
@@ -309,6 +310,7 @@ p{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    opacity: 0.3;
 }
 
 .cont-2 div:nth-child(3){
@@ -316,6 +318,7 @@ p{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    opacity: 0.3;
 }
 
 .cont-2 div:nth-child(4){
@@ -323,12 +326,14 @@ p{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    opacity: 0.3;
 }
 .cont-2 div:nth-child(5){
     background-image: url("https://img.favpng.com/10/3/23/happy-socks-men-s-cat-men-s-leopard-sock-s-socks-blue-pink-happy-socks-logo-png-favpng-NUf1FhWYaMTHq75Gf3LgJcXgp.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    opacity: 0.3;
 }
 
 .cont-3{
@@ -468,7 +473,80 @@ p{
 .cont-8 p{
     text-align: center;
 }
+.swiper{
+    height: 70vh;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: #f2f2f2; */
+    margin: auto;
+    border-radius: 30px;
+}
 
+.cont-9{
+    height: 70vh;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: #f2f2f2; */
+    margin: auto;
+}
+.cont-9 .cards .image{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    position: relative;
+    bottom: 10vh;
+}
+.cont-9 .cards .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.cont-9 .cards .p{
+    position: relative;
+    bottom: 7vh;
+}
+
+.cont-9 .cards .p p{
+    text-align: center;
+    font-size: 15px;
+}
+
+.cont-9 .cards .logo{
+    height: 80px;
+    width: 20vw;
+    margin: auto;
+}
+
+.cont-9 .cards .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.3;
+}
+.cont-9 .cards{
+    border-radius: 20px;
+    background: #fff;
+    height: 70%;
+    width: 25%;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+.cont-9 .cards .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.cards h6{
+    position: relative;
+    top: 3vh;
+    font-size: 15px;
+}
 .cont-11{
     margin: 20vh auto 10vh;
     height: 60vh;
