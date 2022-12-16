@@ -21,4 +21,6 @@ function closeModel(modal){
     if(modal===null) return
     modal.classList.remove('active')
     closemodelButton.classList.remove('show')
+    modal.currentTime = 0;
+    modal.pause()
 }
