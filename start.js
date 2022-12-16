@@ -97,5 +97,5 @@ function divcreater(){
 //logo
 
 document.querySelector("#logo").addEventListener("click",()=>{
-    window.location.replace("index.html")
+    window.location.replace("fw22_0574/index.html")
 })
