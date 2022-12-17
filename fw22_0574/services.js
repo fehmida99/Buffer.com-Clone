@@ -335,7 +335,7 @@ function createdivs(montharr) {
         div.append(title, desc, price, monthline, hr, feature)
         for (k = 0; k < montharr[i].features.length; k++) {
             let f = document.createElement("p")
-            f.innerText = "✔️  " + montharr[i].features[k]
+            f.innerHTML = ` <i class="fa-solid fa-check"style="color:#2c4bff"></i> ${montharr[i].features[k]}` 
             div.append(f)
         }
 
