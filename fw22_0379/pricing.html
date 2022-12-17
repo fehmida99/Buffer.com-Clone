@@ -23,10 +23,10 @@
 
     <section class="base-section-ss">
         <div class="base-container-ss">
-            <button>
+            <button id="monthly">
                 Monthly
             </button>
-            <button style="margin-left: -5px;">
+            <button style="margin-left: -5px;" id="yearly">
                 Yearly
             </button>
         </div>
@@ -61,7 +61,7 @@
                             <i class="fa-solid fa-check" style="color: blue;"></i> Basic publishing tools
                         </li>
                     </ul>
-                    <a href="#">See all features</a>
+                    <a href="#bottom">See all features</a>
                     <hr>
                 </div>
             </div>
@@ -71,12 +71,12 @@
                     <p>For professionals who use publishing, analytics & engagement tools.</p>
                     <div>
                         <span>$</span>
-                        <p>5</p>
+                        <p id="price">5</p>
                         <div>
                             <span>/month <br> per channel</span>
                         </div>
                     </div>
-                    <p>Add additional channels for $5/month <br> Billed at <span>$72</span> <b>$60/year</b></p>
+                    <p>Add additional channels for $5/month <br> Billed at <span>$72</span> <b id="price-2">$60/year</b></p>
                     <button>Try free for 14-days</button>
                     <ul>
                         <li>
@@ -95,7 +95,7 @@
                             <i class="fa-solid fa-check" style="color: blue;"> </i>Easy, clear exportable reports
                         </li>
                     </ul>
-                    <a href="#">See all features</a>
+                    <a href="#bottom">See all features</a>
                     <hr>
                 </div>
             </div>
@@ -105,12 +105,12 @@
                     <p>For teams who want unlimited user seating, collaboration, and reporting.</p>
                     <div>
                         <span>$</span>
-                        <p>10</p>
+                        <p id="price">10</p>
                         <div>
                             <span>/month <br> per channel</span>
                         </div>
                     </div>
-                    <p>Add additional channels for $10/month <br> Billed at <span>$144</span> <b>$120/year</b></p>
+                    <p>Add additional channels for $10/month <br> Billed at <span>$144</span> <b id="price-2">$120/year</b></p>
                     <button>Try free for 14-days</button>
                     <ul>
                         <li>
@@ -123,7 +123,7 @@
                             <i class="fa-solid fa-check" style="color: blue;"> </i>Draft collaboration tools
                         </li>
                     </ul>
-                    <a href="#">See all features</a>
+                    <a href="#bottom">See all features</a>
                     <hr>
                 </div>
             </div>
@@ -133,12 +133,12 @@
                     <p>For marketing agencies with 10 or more social channels.</p>
                     <div>
                         <span>$</span>
-                        <p>100</p>
+                        <p id="price">100</p>
                         <div>
                             <span>/month <br> for 10 channel</span>
                         </div>
                     </div>
-                    <p>Add additional channels for <span>$10</span> $5/month <br> Billed at <span>$1440</span> <b>$1200/year</b></p>
+                    <p>Add additional channels for <span>$10</span> $5/month <br> Billed at <span>$1440</span> <b id="price-2">$1200/year</b></p>
                     <button>Try free for 14-days</button>
                     <ul>
                         <li>
@@ -151,7 +151,7 @@
                             <i class="fa-solid fa-check" style="color: blue;"></i>Agency-friendly pricing
                         </li>
                     </ul>
-                    <a href="#">See all features</a>
+                    <a href="#bottom">See all features</a>
                     <hr>
                 </div>
             </div>
@@ -169,45 +169,636 @@
         </div>
     </section>
 
-    <section class="bottom">
-        <h2 style="font-size: 35px;">Compare Our Plans side-by-side</h2>
-        <div>
-            <div class="bottom-1">
-                <div>
-                    <h2>Basics</h2>
-                </div>
-                <hr>
-                <div>
-                    <h2>Monthly Price</h2>
-                </div>
-                <hr>
-                <div>
-                    <h2>Channels</h2>
-                    <p>Example: 2 Twitter profiles, 2 Facebook pages, and 2 Start Pages counts as 6 channels.</p>
-                </div>
-                <hr>
-                <div>
-                    <h2>Scheduled Posts Per Channel</h2>
-                    <p>The number of posts you can store in your queue (per channel). There is no monthly, or yearly limit.</p>
-                </div>
-                <hr>
-                <div>
-                    <h2>Included Users</h2>
-                    <p>The number of users who can access and contribute content to your Buffer account.</p>
-    
-                </div>
-                <hr>
-                <div>
-                    <h2>Invite Additional Users</h2>
-                    <p>Invite Additional Team members or clients to collaborate with you</p>
-                </div>
-            </div>
-            <div class="bottom-2"></div>
-            <div class="bottom-3"></div>
-            <div class="bottom-4"></div>
-            <div class="bottom-5"></div>
-        </div>
+    <section class="bottom" id="bottom">
+        <h2 style="font-size: 35px; padding-bottom: 70px;">Compare Our Plans side-by-side</h2>
+        <table class="table-1">
+            <tbody class="tbody-1">
+                <tr>
+                    <th>
+                        <h2 style="padding-top: 120px; text-align: start;">Basics</h2>
+                        <hr style="margin-top: 15px;">
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <h2>Free</h2>
+                                <span>$0 per channel</span>
+                                <button>Get Started</button>
+                            </div>
+                        </div>
+                        <hr>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <h2>Essentials</h2>
+                                <span>$5/mo per channel</span>
+                                <button>Try Free for 14-days</button>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <h2>Team</h2>
+                                <span>$10/mo per channel</span>
+                                <button>Try Free for 14-days</button>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <h2>Agency</h2>
+                                <span>$100/mo for 10 channels</span>
+                                <button>Try Free for 14-days</button>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+            </tbody>
+
+            <tbody class="tbody-2" >
+                <tr>
+                    <th class="remove_border">
+                       <div>
+                        <h2>Monthly Price</h2>
+                    </div>
+                    <hr>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <p>Always $0</p>
+                            </div>
+                        </div>
+                        <hr>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <p>Starts at $5/mo</p>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <p>Starts at $5/mo</p>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <p>Starts at $100/mo <br>
+                                 (Billed at $1200/yr)</p>
+                             </div>
+                        </div>
+                    </th>
+                </tr>
+            </tbody>
+
+            <tbody class="tbody-2">
+                <tr>
+                    <th  class="remove_border">
+                        <div >
+                            <h2>Channels</h2>
+                        </div>
+                        <hr>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <p>Up to 3</p>
+                            </div>
+                        </div>
+                        <hr>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <p>Unlimited, $5/mo per <br> channel</p>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <p>Unlimited, $10/mo per channel</p>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <p>Unlimited, $1200/yr for the first 10 channels. Additional channels for $60/yr per channel</p>
+                             </div>
+                        </div>
+                    </th>
+                </tr>
+            </tbody>
+
+            <tbody class="tbody-2">
+                <tr>
+                    <th  class="remove_border">
+                        <div>
+                            <h2>Scheduled Posts Per Channe</h2>
+                        </div>
+                        <hr>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <p>1</p>
+                            </div>
+                        </div>
+                        <hr>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <p>1</p>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <p>Unlimited</p>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <p>Unlimited</p>
+                             </div>
+                        </div>
+                    </th>
+                </tr>
+            </tbody>
+
+            <tbody class="tbody-2" >
+                <tr>
+                    <th  class="remove_border">
+                        <div style="border-bottom: none;">
+                            <h2>Invite Additional Users</h2>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-xmark" style="font-size: 40px;"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-xmark" style="font-size: 40px;"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <p>Unlimited</p>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <p>Unlimited</p>
+                             </div>
+                        </div>
+                    </th>
+                </tr>
+            </tbody>
+
+        </table>
     </section>
+
+    <section class="bottom" id="bottom">
+        <table class="table-1">
+            <tbody class="tbody-1">
+                <tr>
+                    <th>
+                        <h2 style="padding-top: 120px; text-align: start;">Channels</h2>
+                        <hr style="margin-top: 15px;">
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <h2>Free</h2>
+                                <span>$0 per channel</span>
+                                <button>Get Started</button>
+                            </div>
+                        </div>
+                        <hr>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <h2>Essentials</h2>
+                                <span>$5/mo per channel</span>
+                                <button>Try Free for 14-days</button>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <h2>Team</h2>
+                                <span>$10/mo per channel</span>
+                                <button>Try Free for 14-days</button>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <h2>Agency</h2>
+                                <span>$100/mo for 10 channels</span>
+                                <button>Try Free for 14-days</button>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+            </tbody>
+
+            <tbody class="tbody-2" >
+                <tr>
+                    <th class="remove_border">
+                       <div>
+                        <h2>Instagram</h2>
+                    </div>
+                    <hr>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                        <hr>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                             </div>
+                        </div>
+                    </th>
+                </tr>
+            </tbody>
+
+            <tbody class="tbody-2">
+                <tr>
+                    <th  class="remove_border">
+                        <div >
+                            <h2>Facebook</h2>
+                        </div>
+                        <hr>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                        <hr>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                             </div>
+                        </div>
+                    </th>
+                </tr>
+            </tbody>
+
+            <tbody class="tbody-2">
+                <tr>
+                    <th  class="remove_border">
+                        <div>
+                            <h2>LinkedIn</h2>
+                        </div>
+                        <hr>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                        <hr>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                             </div>
+                        </div>
+                    </th>
+                </tr>
+            </tbody>
+
+            <tbody class="tbody-2" >
+                <tr>
+                    <th  class="remove_border">
+                        <div style="border-bottom: none;">
+                            <h2>Shop Grid</h2>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                             </div>
+                        </div>
+                    </th>
+                </tr>
+            </tbody>
+
+        </table>
+    </section>
+    
+    <section class="bottom" id="bottom">
+        <table class="table-1">
+            <tbody class="tbody-1">
+                <tr>
+                    <th>
+                        <h2 style="padding-top: 120px; text-align: start;">Integrations </h2>
+                        <hr style="margin-top: 15px;">
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <h2>Free</h2>
+                                <span>$0 per channel</span>
+                                <button>Get Started</button>
+                            </div>
+                        </div>
+                        <hr>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <h2>Essentials</h2>
+                                <span>$5/mo per channel</span>
+                                <button>Try Free for 14-days</button>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <h2>Team</h2>
+                                <span>$10/mo per channel</span>
+                                <button>Try Free for 14-days</button>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <h2>Agency</h2>
+                                <span>$100/mo for 10 channels</span>
+                                <button>Try Free for 14-days</button>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+            </tbody>
+
+            <tbody class="tbody-2" >
+                <tr>
+                    <th class="remove_border">
+                       <div>
+                        <h2>Invite Additional Users</h2>
+                    </div>
+                    <hr>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                        </div>
+                        <hr>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                             </div>
+                        </div>
+                    </th>
+                </tr>
+            </tbody>
+
+            <tbody class="tbody-2">
+                <tr>
+                    <th  class="remove_border">
+                        <div >
+                            <h2>Draft Post Management</h2>
+                        </div>
+                        <hr>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                        </div>
+                        <hr>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                             </div>
+                        </div>
+                    </th>
+                </tr>
+            </tbody>
+
+            <tbody class="tbody-2">
+                <tr>
+                    <th  class="remove_border">
+                        <div>
+                            <h2>Custom Access</h2>
+                        </div>
+                        <hr>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                        </div>
+                        <hr>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                             </div>
+                        </div>
+                    </th>
+                </tr>
+            </tbody>
+
+            <tbody class="tbody-2" >
+                <tr>
+                    <th  class="remove_border">
+                        <div style="border-bottom: none;">
+                            <h2>Approval Workflow Tools</h2>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                             </div>
+                        </div>
+                    </th>
+                </tr>
+            </tbody>
+
+        </table>
+    </section>
+
 </body>
 </html>
 <script src="https://kit.fontawesome.com/1bffa3735e.js" crossorigin="anonymous"></script>
+<script src="./pricing.js"></script>
