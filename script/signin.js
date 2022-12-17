@@ -4,13 +4,20 @@ console.log(lsData[0])
 form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-
+    let count = 0;
     for (let i = 0; i < lsData.length; i++) {
         if (lsData[i].email === form.email.value && lsData[i].pass === form.pass.value) {
-            alert("Login succesful")
-            // window.location.href = "index.html"
-            break
+            count++
+            break;
+
         }
+    }
+    if (count == 1) {
+        alert("Login succesful")
+        window.location.href = "./fw21_1173/calendar.html"
+
+    } else {
+        alert("Login fail")
     }
 
 })
