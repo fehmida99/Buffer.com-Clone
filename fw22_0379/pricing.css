@@ -6,6 +6,16 @@
     font-family: 'Poppins';
 }
 
+body::-webkit-scrollbar{
+    width:  7px;
+    background: #f0f0f0;
+}
+
+body::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background: #858585;
+}
+
 .base-section{
     padding-bottom: 60px;
 }
