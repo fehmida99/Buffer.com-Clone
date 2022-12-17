@@ -248,15 +248,26 @@ function calculation() {
        
        document.querySelector("#total").innerText=cost2
        document.querySelector("#total2").innerText=cost2
-       
+       localStorage.setItem("total-billed",cost2)
 
+      
 
 
 }
 
 
 
+//payment button
 
+let btn = document.getElementById("payment")
+      
+
+btn.addEventListener("click", () => {
+// window.location.href=""
+
+ 
+
+})
 
 
 
@@ -307,7 +318,9 @@ function createdivs(montharr) {
         let desc = document.createElement("p")
         desc.innerText = montharr[i].desc
         let price = document.createElement("h2")
+        price.style.fontSize="35px"
         price.innerText = "$" + montharr[i].price
+        
 
         let monthline = document.createElement("p")
         monthline.innerText = montharr[i].month
@@ -340,12 +353,3 @@ function createdivs(montharr) {
 
 
 
-let btn = document.getElementById("payment")
-
-
-btn.addEventListener("click", () => {
-
-
-    console.log("ok")
-
-})

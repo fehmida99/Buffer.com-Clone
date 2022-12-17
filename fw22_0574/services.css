@@ -18,9 +18,7 @@
     min-height: 100vh;
     margin: 0;
 } */ 
-*{
-    /* line-height: 35px; */
-}
+
 #title {
     font-size: 30px;
     margin-top: 30px;
@@ -33,11 +31,20 @@
 }
 
 #payment {
-    margin-top: 20px;
+   
     border-radius: 10px;
     border: 1px rgb(44, 75, 255);
     background: rgb(44, 75, 255);
     color: white;
+    width: 200px;
+    height: 35px;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+
+    
 }
 
 .modal_container {
@@ -51,7 +58,7 @@
     top: 0;
 
     left: 90px;
-    right: 90px;
+    right: 120px;
     top: 10;
 
     height: auto;
@@ -63,9 +70,12 @@
 
     pointer-events: auto;
     opacity: 1;
-    width: 90%;
+    width: 80%;
 
 
+}
+#total,#total2{
+    font-size: 35px;
 }
 
 .modal_container>div>div {
@@ -155,6 +165,20 @@ font-size: 35px;
    border-right: 1px solid rgb(165, 158, 158);
 
 }
+#modal_container{
+    width: 80%;
+    left: 200px;
+    right: 200px;
+    height:auto;
+}
+#modal_container>*{
+    line-height: 35px;
+    font-size: 15px;
+
+}
+.first>div>p{
+    font-size: 15px;
+}
 
 #third {
     width: 100%;
@@ -162,6 +186,7 @@ font-size: 35px;
    
     width: 31.5%;
 }
+
 
 #open {
     height: 7vh;
