@@ -366,3 +366,14 @@ input:checked+.slider:before {
     border: 2px solid #2196F3;
 
 }
+
+
+@media all and (min-width:299px) and (max-width:699px) {
+
+
+    .first{
+        flex-direction: column;
+
+    }
+
+}
