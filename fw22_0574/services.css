@@ -179,7 +179,12 @@ font-size: 35px;
 .first>div>p{
     font-size: 15px;
 }
-
+/* .first{
+    height: auto;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+} */
 #third {
     width: 100%;
     top: 0;
