@@ -6,12 +6,54 @@
     <title>Media Flow</title>
 
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/start.css">
+    <!-- <link rel="stylesheet" href="style/start.css"> -->
     <link rel="stylesheet" href="style/navbar.css">
+    <!-- <link rel="stylesheet" href="style/footer.css"> -->
+    <script src="https://kit.fontawesome.com/1f971e42f5.js" crossorigin="anonymous"></script>
+  <style>
+    .nav-bar{
+      /* border: 1px solid red; */
+    margin-top: 2vh;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nav-bar #logo{
+position: relative;
+left: 7vw;
+
+}
+  </style>
   </head>
   <body>
      
-  
+    <div class="nav-bar">
+    
+      <img id="logo" src="./data/logo.png" alt="">
+
+      <ul>
+          <li><a href="">Publishing  </a>
+              
+              <div class="drop-down">
+                 
+              </div>
+          </li>
+          <li><a href="#">Analytics   </a>
+              <div class="channel-down">
+                 
+              </div>
+          </li>
+          <li><a href="#">Engagement</a></li>
+          <li><a href="#">Blog</a></li>
+      </ul>
+      <!-- <div class="login-btn">
+          <button id="open">Start Subscription</button>
+          <a href="/signin.html">Log in</a>
+          <button class="get-started">Get started now</button>
+      </div> -->
+  </div>
 
    
 
@@ -21,13 +63,16 @@
 
 
      <!-- <--- publishing part --->
+      <div class="cont">
+
+     
      <div class="left">
 
        
 
         
         <h3>Content</h3>
-        <i class="fa-regular fa-calendar"></i>
+        <!-- <i class="fa-regular fa-calendar"></i> -->
         <h3 id="box" >Calendar</h3>
         <h3>Compaigns</h3>
       
@@ -41,7 +86,7 @@
        </div>
 
 
-    <!-- <--- calaendar part  --->
+    <!-- <--- calendar part  --->
 
     <div id="container">
         <div id="flex">
@@ -99,6 +144,9 @@
     </div>
 
     <div id="modalBackDrop"></div>
+  </div>
+
+  
 
     <script src="script/script.js"></script>
   </body>
