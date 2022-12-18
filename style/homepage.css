@@ -65,7 +65,7 @@ p{
 .nav-bar img{
     height: 16vh;
     position: relative;
-    left: 11vw;
+    left: 3vw;
     cursor: pointer;
 }
 
@@ -195,7 +195,7 @@ p{
 }
 .nav-bar .login-btn{
     position: relative;
-    right: 10vw;
+    right: 5vw;
 }
 .nav-bar .login-btn a{
     padding: 0px 1vw;
@@ -344,7 +344,7 @@ p{
 
 
 .cont-2 div:nth-child(1){
-    background-image: url("img2.png");
+    background-image: url("/data/img2.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
