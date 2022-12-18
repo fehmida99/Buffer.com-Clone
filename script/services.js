@@ -119,8 +119,7 @@ let yeararr = [
 
 
     },
-
-
+   
 
 ]
 
@@ -248,15 +247,26 @@ function calculation() {
        
        document.querySelector("#total").innerText=cost2
        document.querySelector("#total2").innerText=cost2
-       
+       localStorage.setItem("total-billed",cost2)
 
+      
 
 
 }
 
 
 
+//payment button
 
+let btn = document.getElementById("payment")
+      
+
+btn.addEventListener("click", () => {
+// window.location.href=""
+
+ 
+
+})
 
 
 
@@ -307,7 +317,9 @@ function createdivs(montharr) {
         let desc = document.createElement("p")
         desc.innerText = montharr[i].desc
         let price = document.createElement("h2")
+        price.style.fontSize="35px"
         price.innerText = "$" + montharr[i].price
+        
 
         let monthline = document.createElement("p")
         monthline.innerText = montharr[i].month
@@ -323,7 +335,7 @@ function createdivs(montharr) {
         div.append(title, desc, price, monthline, hr, feature)
         for (k = 0; k < montharr[i].features.length; k++) {
             let f = document.createElement("p")
-            f.innerText = "✔️  " + montharr[i].features[k]
+            f.innerHTML = ` <i class="fa-solid fa-check"style="color:#2c4bff"></i> ${montharr[i].features[k]}` 
             div.append(f)
         }
 
@@ -340,12 +352,3 @@ function createdivs(montharr) {
 
 
 
-let btn = document.getElementById("payment")
-
-
-btn.addEventListener("click", () => {
-
-
-    console.log("ok")
-
-})

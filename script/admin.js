@@ -1,7 +1,3 @@
-
-
-//mini database
-
 let arr =[
     {
         "title":"Traveler",
@@ -73,29 +69,71 @@ let arr =[
 ]
 
 
-divcreater(arr)
 
-function divcreater(){
+let newarr = JSON.parse(localStorage.getItem("newarr"))
 
 
-    arr.forEach((item)=>{
-        let div = document.createElement("div")
+document.querySelector("form").addEventListener("submit",(event)=>{
+    event.preventDefault()
+    let title = document.querySelector("#title").value
+    let img = document.querySelector("#img").value
+    
+    let obj={
+    title,
+    img
+    
+    }
+  if(img=="" || title==""){
+    alert("Please add valid img url")
+  }else{
+    alert("Product added succesfully")
+    arr.push(obj)
+    
+    localStorage.setItem("newarr",JSON.stringify(arr))
+  
+  }
+    
+    
+})
 
-        let img = document.createElement("img")
-        img.src=item.img
-        
-        let p= document.createElement("h3")
-        p.innerText=item.title
-        div.append(img,p)
-        document.querySelector(".big_cont").append(div)
-    })
+document.querySelector("#form2").addEventListener("submit",(event)=>{
 
-   
+event.preventDefault()
+
+let name = document.querySelector("#del").value
+let arr = JSON.parse(localStorage.getItem("newarr")) || []
+let count=0
+
+for (let i=0; i<arr.length;i++) {
+    if(arr[i].title==name){
+        arr.splice(i,1)
+        console.log("match")
+      localStorage.setItem("newarr",JSON.stringify(arr))
+     
+        count++
+    }
+    
+}
+if(count>0){
+    alert("Data Deleted")
+
+
+}else{
+    alert("Title not matched")
+
 }
 
 
-//logo
+
+})
+
+let length = JSON.parse(localStorage.getItem("newarr"))
+length=length.length
+document.querySelector("#product").innerText=length
+
 
 document.querySelector("#logo").addEventListener("click",()=>{
-    window.location.replace("index.html")
+
+    window.location.href="index.html"
+
 })

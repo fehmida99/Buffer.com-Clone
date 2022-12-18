@@ -18,9 +18,13 @@
     min-height: 100vh;
     margin: 0;
 } */ 
+<<<<<<< HEAD:fw22_0574/services.css
 /* *{
     line-height: 35px;
 } */
+=======
+
+>>>>>>> 5b37dfd08aa67592c24a097baf43d3ce6158f576:style/services.css
 #title {
     font-size: 30px;
     margin-top: 30px;
@@ -33,11 +37,20 @@
 }
 
 #payment {
-    margin-top: 20px;
+   
     border-radius: 10px;
     border: 1px rgb(44, 75, 255);
     background: rgb(44, 75, 255);
     color: white;
+    width: 200px;
+    height: 35px;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+
+    
 }
 
 .modal_container {
@@ -51,7 +64,7 @@
     top: 0;
 
     left: 90px;
-    right: 90px;
+    right: 120px;
     top: 10;
 
     height: auto;
@@ -63,9 +76,12 @@
 
     pointer-events: auto;
     opacity: 1;
-    width: 90%;
+    width: 80%;
 
 
+}
+#total,#total2{
+    font-size: 35px;
 }
 
 .modal_container>div>div {
@@ -155,13 +171,33 @@ font-size: 35px;
    border-right: 1px solid rgb(165, 158, 158);
 
 }
+#modal_container{
+    width: 80%;
+    left: 200px;
+    right: 200px;
+    height:auto;
+}
+#modal_container>*{
+    line-height: 35px;
+    font-size: 15px;
 
+}
+.first>div>p{
+    font-size: 15px;
+}
+/* .first{
+    height: auto;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+} */
 #third {
     width: 100%;
     top: 0;
    
-    width: 31.5%;
+    width: 31.7%;
 }
+
 
 #open {
     height: 7vh;
@@ -364,5 +400,16 @@ input:checked+.slider:before {
 
 .selection {
     border: 2px solid #2196F3;
+
+}
+
+
+@media all and (min-width:299px) and (max-width:699px) {
+
+
+    .first{
+        flex-direction: column;
+
+    }
 
 }
