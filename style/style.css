@@ -3,15 +3,28 @@
 
 
 body {
-    display: flex;
-    margin-top: 50px;
+    /* display: flex; */
+    /* margin-top: 50px; */
     justify-content: center;
     background-color: white;
     font-family: 'Poppins', sans-serif;
 }
 /* <--- publishing part -----> */
+.cont{
+  display: flex;
+}
+.nav-bar ul li a{
+  color: rgb(25, 38, 241);
+  text-decoration: none;
+}
 
 
+
+
+.nav-bar .login-btn{
+position: relative;
+right: 5vw;
+}
 
 .left{
 border: 1px solid rgb(232, 232, 232);
@@ -63,7 +76,7 @@ color: black;
     justify-content: space-between;
   }
   .post {
-    background-color: rgb(12, 10, 130);
+    background-color:  rgb(25, 38, 241);
     padding:10px;
     /* color: black; */
     font-weight: bold;
@@ -81,7 +94,8 @@ color: black;
    
   }
   #header button {
-    background-color: rgb(12, 10, 130);
+    /* background-color: rgb(12, 10, 130); */
+    background-color:  rgb(25, 38, 241);;
     font-weight: bold;
    
     
