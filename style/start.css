@@ -1,233 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
+
+/* //////////////////// NavBar CSS       //////////////////////// */
 .nav-bar{
-    margin-top: 2vh;
-    height: 10vh;
-    width: 100%;
+    height: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-}
-
-.nav-bar img{
-    height: 16vh;
-    position: relative;
-    left: 11vw;
-    cursor: pointer;
-}
-
-.nav-bar ul{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+  
+  .nav-bar a{
+    text-decoration: none;
+    color: rgb(87, 86, 86);
+    height: 100%;
+    width: 20%;
     display: flex;
-}
-.nav-bar ul li{
-    margin: 0px 2vw;
-    list-style: none;
-    position: relative;
-}
-.nav-bar ul li i{
-    position: relative;
-    top: 2px;
-    left: 2px;
-}
-.nav-bar ul li a{
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    transition: all 0.2s;
-}
-.nav-bar ul li a:hover{
-    color: rgb(25, 38, 241);
-    text-decoration: underline;
-}
-.drop-down{
-    display: none;
-}
-.nav-bar ul li:hover .drop-down{
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    border-radius: 6px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-    z-index: 1;
-    background-color: white;
-}
-.drop-down ul{
-    display: block;
-    margin: 2vh 0vw;
-    border-radius: 20px;
-}
-.drop-down ul li{
-    width: 15vw;
-    padding: 2vh 1vw 1vh 1vw;
-    border-radius: 7px;
-    height: 11vh;
-}
-.drop-down ul li i{
-    position: absolute;
-    font-size: 18px;
-    padding: 3vh 3px 0px 2px;
-}
-.drop-down ul li a{
-    color: black;
-}
-.drop-down ul li a h4{
-    padding-bottom: 2px;
-    padding-left: 2vw;
-}
-.drop-down ul li a p{
-    font-size: 13px;
-    padding-left: 2vw;
-    color: rgb(130, 129, 129);
-}
-.drop-down ul li a:hover{
-    color: black;
-    border-radius: 6px;
-    text-decoration: none;
-}
-.drop-down ul li:hover{
-    background-color: rgb(244, 244, 244);
-}
-.channel-down{
-    display: none;
-}
-.nav-bar ul li:hover .channel-down{
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    border-radius: 6px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-    z-index: 1;
-    transition: all 0.3s;
-    background-color: white;
-}
-.channel-down ul{
-    display: block;
-    margin: 2vh 0vw;
-    border-radius: 20px;
-}
-
-.channel-down ul li{
-    width: 15vw;
-    padding: 2vh 1vw 1vh 1vw;
-    border-radius: 7px;
-    height: 7vh;
-}
-.channel-down ul li i{
-    position: absolute;
-    font-size: 18px;
-    padding: 15px 3px 0px 2px;
-}
-.channel-down ul li a{
-    color: black;
-}
-.channel-down ul li a h4{
-    padding-bottom: 2px;
-    padding-left: 2vw;
-}
-.channel-down ul li a p{
-    font-size: 13px;
-    padding-left: 2vw;
-    color: rgb(130, 129, 129);
-}
-.channel-down ul li a:hover{
-    color: black;
-    border-radius: 6px;
-    text-decoration: none;
-}
-.channel-down ul li:hover{
-    background-color: rgb(244, 244, 244);
-    cursor: pointer;
-}
-.nav-bar .login-btn{
-    position: relative;
-    right: 10vw;
-}
-.nav-bar .login-btn a{
-    padding: 0px 1vw;
-    text-decoration: none;
-    color: rgb(22, 22, 222);
-    font-size: 18px;
-}
-.nav-bar .login-btn a:hover{
-    text-decoration: underline;
-}
-.nav-bar .login-btn button{
-    height: 7vh;
-    width: 11vw;
-    border: none;
-    background-color: #3832ff;
-    color: white;
-    border-radius: 6px;
-    font-size: 18px;
-    cursor: pointer;
-}
-.nav-bar .login-btn button:hover{
-    background-color: rgb(14, 75, 190);
-}
-
-.cont-1{
-    margin: 8vh auto 0px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .top-nav{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  .top-nav > a:hover{
+    color: blue;
+    background-color: #f5f5f5;
+    border-bottom: 3px solid blue;
+  }
+  
+  
+  .nav-bar > div > div{
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-bar > div > div > img{
+    width: 60px;
+  } 
+  
+  .account{
+    width: 30%;
     display: flex;
     justify-content: space-evenly;
-    height: 80vh;
-    width: 85%;
-}
-.close-button{
-    position: relative;
-    left: 46vw;
-    bottom: 57vh;
-    cursor: pointer;
-    border: none;
-    background: none;
-    outline: none;
-    font-size: 2rem;
-    font-weight: bold;
-    scale: 0;
-}
-.close-button.show{
-    scale: 1;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-*{
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Poppins', sans-serif;
-}
-
-
-
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .account .user i{
+    font-size: 40px;
+    margin-left: 30px;
+  }
+  
+  .account > :first-child{
+    color: blue;
+    font-size: 17px;
+  }
+  
+  .account > :first-child i{
+    margin-right: 5px;
+  }
+  
+  /* ///////////////////   NavBar End ////////////////// */
 
 .small-cont{
    
