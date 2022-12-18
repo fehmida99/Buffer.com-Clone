@@ -18,6 +18,7 @@ body::-webkit-scrollbar-thumb{
 
 .base-section{
     padding-bottom: 60px;
+    margin-top: 60px;
 }
 
 .base-section .base-container{
@@ -27,7 +28,7 @@ body::-webkit-scrollbar-thumb{
 
 .base-section .base-container h1{
     margin: auto;
-    font-size: 35px;
+    font-size: 45px;
     text-align: center;
     line-height: 1.3;
 }
