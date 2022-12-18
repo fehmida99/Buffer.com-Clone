@@ -24,3 +24,11 @@ function closeModel(modal){
     modal.currentTime = 0;
     modal.pause()
 }
+
+let getStarted = document.querySelectorAll(".get-started")
+
+getStarted.forEach((elem)=>{
+    elem.addEventListener("click", ()=>{
+        window.location.href = "register.html"
+    })
+})
