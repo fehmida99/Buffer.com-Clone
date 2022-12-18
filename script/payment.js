@@ -6,3 +6,7 @@ let price = 60;
 
 price_tag.innerHTML = `$${price}.00`;
 email.setAttribute('placeholder', `Email                        ${userEmail}`)
+
+back_button.addEventListener('click', () =>{
+    window.location = './index.html'
+})
