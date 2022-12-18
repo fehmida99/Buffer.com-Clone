@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AddProduct Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style/navbar.css" />
+    <link rel="stylesheet" href="./style/index.css" />
+    <link rel="stylesheet" href="./style/products.css">
+    <link rel="icon" type="image/x-icon" href="../images/logo.png" />
+  </head>
+  <body>
+    <div id="navbar">
+     
+    </div>
+
+    <div id="dashboard">
+      <!--Left side navbar-->
+      <div id="LeftSideBar">
+      
+      </div>
+
+      <!--Right side main section-->
+      <div id="RightSideBar">
+        <h2>Add Product Details</h2><br>
+        <form action="" id="productData">
+          <select name="" id="category">
+            <option >Select Category</option>
+            <option value="makeup">Makeup</option>
+            <option value="skin">Skin</option>
+            <option value="hair">Hair</option>
+            <option value="personal">Persona</option>
+            <option value="kids">kids</option>
+            <option value="perfume">perfume</option>
+            <option value="ayurveda">ayurveda</option>
+          </select>
+          <input type="text" name="" placeholder="imageUrl"  id="image"/>
+          <input type="text" placeholder="Title" id="title"/>
+          <input type="number" placeholder="Enter Weight" id="wight"/>
+          <input type="text"  placeholder="Enter Id"  id="id"/>
+          <input type="number" placeholder="Enter Price" id="price"/>
+          <input type="number" placeholder="Enter discount" id="discount"/>
+          <input type="text" placeholder="Enter brand name" id="brand" />
+          <input type="text" placeholder="Enter detail about product" id="description"/>
+          <input type="text"  placeholder="Enter Product Category"  id="productCategory"/>
+          <input type="text" placeholder="Skin type" id="skinType" />
+          <input type="text" placeholder="Enter Shades" id="shades" />
+          <input type="text" id="multipleImage" placeholder="Enter multiple image url sepraded by space">
+          <input type="text" id="how2use" placeholder="How to use">
+          <input type="submit">
+        </form>
+        </div>
+
+  </body>
+</html>
+<script type='module' src="./scripts/product.js"></script>
