@@ -134,6 +134,6 @@ document.querySelector("#product").innerText=length
 
 document.querySelector("#logo").addEventListener("click",()=>{
 
-    window.location.href="fw22_0574/index.html"
+    window.location.href="index.html"
 
 })
