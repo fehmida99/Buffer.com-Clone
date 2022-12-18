@@ -406,7 +406,7 @@ p{
     margin: 15vh auto;
     height: 30vh;
     width: 100%;
-    background-image: url("/data/img-3.svg");
+    background-image: url("https://buffer.com/static/misc/buffer-loop-v2-variant.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
