@@ -329,14 +329,17 @@ p{
 }
 
 .cont-2{
-    margin: 12vh auto;
-    height: 15vh;
-    width: 85%;
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    grid-template-rows: auto;
-    gap: 30px;
+        margin: 12vh auto 0px 6vw;
+        height: 15vh;
+        width: 85%;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: auto;
+        gap: 60px;
+        position: relative;
+        top: 15vh;
 }
+
 
 
 
@@ -403,7 +406,7 @@ p{
     margin: 15vh auto;
     height: 30vh;
     width: 100%;
-    background-image: url("img-3.svg");
+    background-image: url("/data/img-3.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
