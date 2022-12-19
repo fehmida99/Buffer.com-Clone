@@ -9,11 +9,15 @@
     <script src="https://kit.fontawesome.com/1f971e42f5.js" crossorigin="anonymous"></script>
     <link rel="icon" href="./data/logo.png">
     <link rel="stylesheet" href="style/start.css">
+    <link rel="stylesheet" href="style/services.css">
     <style>
         .top-nav  > :nth-child(5){
           color: blue;
           background-color: #f5f5f5;
           border-bottom: 3px solid blue;
+        }
+        .nav-bar{
+          width: 100%;
         }
     </style>
    
@@ -35,7 +39,8 @@
     </div>
 
     <div class="account">
-        <a href="#"> <i class="fa-solid fa-bolt"></i> Upgrade</a>
+      <button id="open"> <i class="fa-solid fa-bolt"></i>Upgrade</button>
+      
         <a href="#">App</a>
         <a href="#">Help</a>
         <div class="user">
@@ -46,6 +51,103 @@
   </div>
 
 <!-- ////////////////////// NavBar End   //////////////////////// -->
+
+
+
+<div id="modal_container" class="modal_container">
+
+  <div id="modal">
+
+
+      <div class="info">
+          <h1 id="title">Confirm Plan</h1>
+
+      </div>
+      <div id="second">
+          <label for="month">Monthly</label>
+          <label class="switch">
+              <input type="checkbox" id="checkbox">
+              <span class="slider round"></span>
+          </label>
+          <label for="year">Yearly</label>
+          <label id="saving" for="saving">Savings $24/year </label>
+      </div>
+
+      <div id="third">
+          <span id="closed">X</span>
+          <h1 id="sum">Summary</h1>
+
+      </div>
+
+  </div>
+
+
+
+  <div id="service-cont">
+      <div class="first">
+
+      </div>
+      <div class="sec">
+
+          <div>
+              <span>Your Current Plan: Free</span><br>
+              <span>3 Channels : one User</span><br>
+              <hr>
+              <span>Currently Paying: $0/mo</span>
+          </div>
+          <div>
+              <span>Channels </span>
+
+              <i class="fa-brands fa-youtube"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-google"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-linkedin"></i>
+
+
+              <button id="sub"><span id="subout">-</span></button>
+              <button id="count"><input id="val" type="num" value="1"></button>
+              <button id="add">+</button><br>
+              <p>Your updated plan:</p>
+              <p id="plan">Free</p>
+              <span id="channels"><span>1</span> channels</span> <span>Unlimited Users</span>
+              <hr>
+              <span>Total due today:</span><br>
+              <span>$ <span id="total">0</span></span><br>
+              <hr>
+              <span>$ <span id="total2">0</span> will be billed every month until canceled.</span>
+          </div>
+          <button id="payment">Go to Payment</button>
+      </div>
+
+
+  </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <div class="small-cont">
@@ -63,6 +165,7 @@
 </body>
 </html>
 <script src="script/start.js"></script>
+<script src="script/services.js"></script>
 <script>
     let user_name = JSON.parse(localStorage.getItem('registerData'));
     document.querySelector('.user > p').innerHTML = user_name[0].name;
