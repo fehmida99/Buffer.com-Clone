@@ -72,7 +72,7 @@ let arr2 =[
 
 ]
 
-let arr = JSON.parse(localStorage.getItem("newarr"))
+let arr = JSON.parse(localStorage.getItem("newarr"))|| arr2
 
 
 
