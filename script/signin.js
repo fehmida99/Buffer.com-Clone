@@ -14,7 +14,7 @@ form.addEventListener("submit", function (event) {
     }
     if (count == 1) {
         alert("Login succesful")
-        window.location.href = "./fw21_1173/calendar.html"
+        window.location.href = "./calendar.html"
 
     } else {
         alert("Login fail")

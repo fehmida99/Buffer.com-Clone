@@ -4,80 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./data/logo.png" />
     <title>startpage</title>
     <script src="https://kit.fontawesome.com/1f971e42f5.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./data/logo.png">
     <link rel="stylesheet" href="style/start.css">
-    <link rel="stylesheet" href="style/navbar.css">
+    <style>
+        .top-nav  > :nth-child(5){
+          color: blue;
+          background-color: #f5f5f5;
+          border-bottom: 3px solid blue;
+        }
+    </style>
    
 </head>
 <body>
    
-<div id="container">
+<!-- ////////////////////// NavBar   //////////////////////// -->
 
-    <div class="nav-bar">
-        <img id="logo" src="data/logo.png" alt="">
+<div class="nav-bar">
+    <div class="top-nav">
+      <div style="width: 30%;">
+        <img id="logo" src="./data/logo.png" alt="">
+        <h3 style="margin-top: 0px;">MEDIA FLOW</h3>
+      </div>
+      <a href="./calendar.html">Publishing </a>
+      <a href="#">Analytics </a>
+      <a href="#">Engagement</a>
+      <a href="./start.html">Start Page</a></li>
+    </div>
 
-        <ul>
-            <li><a href="#">Tools  <i class="fa-solid fa-angle-down"></i> </a>
-                
-                <div class="drop-down">
-                    <ul>
-                        <li><i class="fa-solid fa-upload"></i> <a href="#">
-                            <h4> Publishing</h4>
-                            <p>Plan , colloborate , abd publish thumb-stopping content</p>
-                        </a></li>
-                        <li><i class="fa-solid fa-arrow-trend-up"></i><a href="#">
-                            <h4>Analytics</h4>
-                            <p>Analyze socal-media performance and create reports</p>
-                        </a></li>
-                        <li><i class="fa-solid fa-message"></i><a href="#">
-                            <h4>Engagement</h4>
-                            <p>Quickly navigate your comments and engage with your audience</p>
-                        </a></li>
-                        <li><i class="fa-solid fa-pen-nib"></i><a href="C:\Users\dell\Desktop\primo-rail-9854\start.html">
-                            <h4 id="start">Start Page</h4>
-                            <p>Build a customized landing page in minutes</p>
-                        </a></li>
-                    </ul>
-                </div>
-            </li>
-            <li><a href="#">Channels  <i class="fa-solid fa-angle-down"></i> </a>
-                <div class="channel-down">
-                    <ul>
-                        <li ><i class="fa-brands fa-facebook"></i> <a href="#"><h4>Facebook</h4></a></li>
-                        <li ><i class="fa-brands fa-google-wallet"></i></i><a href="#">
-                            <h4>Google Bussness Profile</h4>
-                        </a></li>
-                        <li ><i class="fa-brands fa-instagram"></i><a href="#">
-                            <h4>Instagram</h4>
-                        </a></li>
-                        <li ><i class="fa-brands fa-linkedin"></i><a href="#">
-                            <h4>LinkedIn</h4>
-                        </a></li>
-                        <li ><i class="fa-brands fa-pinterest"></i><a href="#">
-                            <h4>Pintrest</h4>
-                        </a></li>
-                        <li ><i class="fa-brands fa-shopify"></i><a href="#">
-                            <h4>Shopify</h4>
-                        </a></li>
-                        <li ><i class="fa-brands fa-tiktok"></i><a href="#">
-                            <h4>Tiktok</h4>
-                        </a></li>
-                        <li ><i class="fa-brands fa-twitter"></i><a href="#">
-                            <h4>Twitter</h4>
-                        </a></li>
-
-                    </ul>
-                </div>
-            </li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Blog</a></li>
-        </ul>
-        <div class="login-btn">
-            <a href="#">Log in</a>
-            <button>Get started now</button>
+    <div class="account">
+        <a href="#"> <i class="fa-solid fa-bolt"></i> Upgrade</a>
+        <a href="#">App</a>
+        <a href="#">Help</a>
+        <div class="user">
+          <p>Account</p>
+          <a href="#"><i class="fa-solid fa-circle-user"></i></a>
         </div>
     </div>
+  </div>
+
+<!-- ////////////////////// NavBar End   //////////////////////// -->
+
 
 <div class="small-cont">
 
@@ -94,3 +63,7 @@
 </body>
 </html>
 <script src="script/start.js"></script>
+<script>
+    let user_name = JSON.parse(localStorage.getItem('registerData'));
+    document.querySelector('.user > p').innerHTML = user_name[0].name;
+</script>

@@ -1,5 +1,5 @@
 const openmodelButton = document.querySelector('[data-model-target]')
-const closemodelButton = document.querySelector('[data-close-button]')
+const closemodelButton = document.querySelector('#closeBtn')
 
 openmodelButton.addEventListener("click",()=>{
     const modal = document.querySelector("video")
@@ -24,3 +24,11 @@ function closeModel(modal){
     modal.currentTime = 0;
     modal.pause()
 }
+
+let getStarted = document.querySelectorAll(".get-started")
+
+getStarted.forEach((elem)=>{
+    elem.addEventListener("click", ()=>{
+        window.location.href = "register.html"
+    })
+})
