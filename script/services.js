@@ -16,10 +16,10 @@ closed.addEventListener("click", () => {
     </div>
     <div class="btn">
         <button class="btn-1">Get started now</button>
-        <button class="btn-2"><i class="fa-regular fa-circle-play"></i> Watch vedio</button>
+        <button class="btn-2"><i class="fa-regular fa-circle-play"></i> Watch video</button>
     </div>
 </div>
-<img id ="img1" src="img-1.webp" alt="">`
+<img id ="img1" src="data/img-1.webp" alt="">`
 
 document.querySelector(".cont-2").innerHTML=`
 <div></div>
