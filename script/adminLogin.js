@@ -20,7 +20,7 @@ form.addEventListener("submit", (e) => {
     if (lsdata.email == email) {
         if (lsdata.password == password && lsdata.employeeCode == employeeCode) {
             alert("Sign in Succesfull")
-            window.location.href = "./index.js"
+            window.location.href = "./admin.html"
         } else if (lsdata.password == null) {
             alert("Plese Enter Password")
         } else {
