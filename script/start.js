@@ -2,7 +2,8 @@
 
 //mini database
 
- let arr2 =[
+let arr2 =[
+
     {
         "title":"Traveler",
         "img":"https://buffer-start-page.s3.amazonaws.com/presets/Default_X2.png"
@@ -72,8 +73,7 @@
 
 ]
 
-let arr = JSON.parse(localStorage.getItem("newarr")) || arr2
-
+let arr = JSON.parse(localStorage.getItem("newarr"))|| arr2
 
 
 divcreater()
