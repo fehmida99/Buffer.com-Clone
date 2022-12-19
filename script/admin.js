@@ -128,7 +128,7 @@ if(count>0){
 })
 
 let length = JSON.parse(localStorage.getItem("newarr"))
-length=length.length
+length =length.length
 document.querySelector("#product").innerText=length
 
 
