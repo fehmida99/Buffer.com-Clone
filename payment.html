@@ -50,17 +50,17 @@
                     <div class="card-number">
                         <input type="text" id="card-number" placeholder="1234 1234 1234 1234" required>
                         <div>
-                            <input required type="text" style="border-bottom-left-radius: 5px;" placeholder="MM/YY">
+                            <input required type="date" style="border-bottom-left-radius: 5px;" placeholder="MM/YY">
                             <input required type="text" style="border-bottom-right-radius: 5px;" placeholder="CVC">
                         </div>
                     </div>
                     <label for="">Name on card</label> <br>
-                    <input required type="text" style="margin-bottom: 20px;">
+                    <input  type="text" style="margin-bottom: 20px;" required>
                     <br>
                     <label for="">Biiling address</label> <br>
                     <div>
-                        <input required type="text" placeholder="Country">
-                        <input required type="text" placeholder="Address">
+                        <input  type="text" placeholder="Country" required>
+                        <input  type="text" placeholder="Address" required>
                     </div>
                     <a href="#">Enter address manually</a>
                     <div class="checkbox">
@@ -72,7 +72,7 @@
                             <p style="font-size: 12px; color: gray; opacity: 0.7;" >Pay faster on Buffer, inc and thousands of sites.</p>
                         </div>
                     </div> <br>
-                    <button type="submit">Subscribe</button>
+                    <button type="submit" id="pay">Subscribe</button>
                 </form>
 
                 <p style="text-align: center;">
