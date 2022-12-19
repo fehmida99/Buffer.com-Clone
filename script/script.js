@@ -145,3 +145,5 @@ button.addEventListener("click",()=> {
 
 
 
+let user_name = JSON.parse(localStorage.getItem('registerData'));
+document.querySelector('.user > p').innerHTML = user_name[0].name;
