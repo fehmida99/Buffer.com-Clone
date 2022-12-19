@@ -262,7 +262,7 @@ let btn = document.getElementById("payment")
       
 
 btn.addEventListener("click", () => {
-// window.location.href=""
+ window.location.href="payment.html"
 
  
 
