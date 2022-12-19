@@ -32,3 +32,9 @@ getStarted.forEach((elem)=>{
         window.location.href = "register.html"
     })
 })
+
+let payment = document.querySelector("#payment")
+
+payment.addEventListener("click",()=>{
+    window.location.href="payment.html"
+})
