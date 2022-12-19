@@ -15,5 +15,5 @@ back_button.addEventListener('click', () =>{
 let subscribe = document.querySelector('#pay');
 subscribe.addEventListener('click', () => {
     alert('Subscribed!!!');
-    window.location.href = './calendar.html'
+    window.location.href = 'calendar.html'
 })
